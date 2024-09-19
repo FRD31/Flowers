@@ -9,8 +9,9 @@ body {
 }
 
 .container {
-    margin-top: 20px;
+    margin: 20px auto;
     padding: 20px;
+    max-width: 600px; /* Limitar el ancho del contenedor */
 }
 
 h1 {
@@ -27,9 +28,11 @@ p {
 .flowers {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 15px;
     margin: 30px 0;
     position: relative;
+    height: 200px; /* Asegura que el contenedor tenga altura suficiente para centrar verticalmente */
 }
 
 .flower {
@@ -56,6 +59,15 @@ p {
 
 /* Adaptaciones para pantallas pequeñas (teléfonos) */
 @media (max-width: 768px) {
+    body {
+        padding: 0; /* Asegura que no haya espacio adicional en móviles */
+    }
+
+    .container {
+        padding: 10px; /* Ajusta el padding para móviles */
+        max-width: 100%; /* Asegura que el contenedor use todo el ancho en móviles */
+    }
+
     h1 {
         font-size: 1.5em;
     }
@@ -65,8 +77,9 @@ p {
     }
 
     .flowers {
-        flex-direction: column; /* Las flores se colocan una debajo de la otra */
-        gap: 10px;
+        height: 100vh; /* Usa toda la altura de la pantalla */
+        flex-direction: column; /* Coloca las flores en una columna para móviles */
+        justify-content: center; /* Centra verticalmente */
     }
 
     .flower {
