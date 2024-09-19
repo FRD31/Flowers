@@ -27,12 +27,13 @@ p {
 
 .flowers {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column; /* Alinear las flores verticalmente */
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center; /* Centrar horizontalmente */
     gap: 15px;
     margin: 30px 0;
     position: relative;
-    height: 200px; /* Asegura que el contenedor tenga altura suficiente para centrar verticalmente */
+    height: 80vh; /* Usa un porcentaje de la altura de la pantalla */
 }
 
 .flower {
@@ -77,9 +78,8 @@ p {
     }
 
     .flowers {
-        height: 100vh; /* Usa toda la altura de la pantalla */
-        flex-direction: column; /* Coloca las flores en una columna para móviles */
-        justify-content: center; /* Centra verticalmente */
+        height: 80vh; /* Usa una parte significativa de la altura de la pantalla */
+        flex-direction: column; /* Alinear las flores verticalmente */
     }
 
     .flower {
@@ -91,3 +91,4 @@ p {
         font-size: 1em;
     }
 }
+
